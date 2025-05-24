@@ -1,0 +1,94 @@
+1.Write a JAVA program to illustrate different types of address.
+ Ans:  CODE-
+            // Class to represent an Address
+            class Address {
+                String type;
+                String street;
+                String city;
+                String state;
+                String zipCode;
+
+                // Constructor to initialize all fields
+                Address(String type, String street, String city, String state, String zipCode) {
+                    this.type = type;
+                    this.street = street;
+                    this.city = city;
+                    this.state = state;
+                    this.zipCode = zipCode;
+                }
+
+                // Method to display the address details
+                void displayAddress() {
+                    System.out.println(type + " Address:");
+                    System.out.println(street);
+                    System.out.println(city + ", " + state + " " + zipCode);
+                    System.out.println();
+                }
+            }
+
+            // Main class with main method
+            public class Main {
+                public static void main(String[] args) {
+                    // Create different Address objects
+                    Address home = new Address("Home", "123 Main St", "Springfield", "IL", "62704");
+                    Address office = new Address("Office", "456 Corporate Blvd", "Springfield", "IL", "62701");
+                    Address mailing = new Address("Mailing", "PO Box 789", "Springfield", "IL", "62705");
+
+                    // Display the addresses
+                    home.displayAddress();
+                    office.displayAddress();
+                    mailing.displayAddress();
+                }
+            }
+
+2. In what ways getHostName() differs from getCannonicalHostName()? Write a JAVA program that,
+# Displays both hostname and the cannonical hostname of a domain.
+# Utilizes getAddress() to determine if the given address is IPv4 or IPv6.
+
+ Ans: getHostName(): Returns the hostname of the IP address. It might return the simple hostname or the IP address as a string if the hostname can't be resolved.
+      getCanonicalHostName(): Returns the fully qualified domain name (FQDN) for the IP address. This involves a reverse DNS lookup to get the complete official domain name.
+     
+     CODE:
+            import java.net.InetAddress;
+        import java.net.UnknownHostException;
+
+        public class HostNameInfo {
+            public static void main(String[] args) {
+                if (args.length != 1) {
+                    System.out.println("Usage: java HostNameInfo <domain_name_or_IP>");
+                    return;
+                }
+
+                String input = args[0];
+
+                try {
+                    InetAddress address = InetAddress.getByName(input);
+
+                    // Display hostname
+                    System.out.println("Hostname: " + address.getHostName());
+
+                    // Display canonical hostname (FQDN)
+                    System.out.println("Canonical Hostname: " + address.getCanonicalHostName());
+
+                    // Get raw IP address bytes
+                    byte[] ip = address.getAddress();
+
+                    // Check IP version based on length of byte array
+                    if (ip.length == 4) {
+                        System.out.println("IP Version: IPv4");
+                    } else if (ip.length == 16) {
+                        System.out.println("IP Version: IPv6");
+                    } else {
+                        System.out.println("IP Version: Unknown");
+                    }
+
+                    // Display IP address
+                    System.out.println("IP Address: " + address.getHostAddress());
+
+                } catch (UnknownHostException e) {
+                    System.out.println("Could not resolve hostname: " + input);
+                }
+            }
+        }
+
+

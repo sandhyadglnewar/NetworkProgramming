@@ -1,0 +1,31 @@
+1. What is URL? Give an example of a URL that shows each components of URL. Diagrammatic representation is more preferred. 
+ Ans: A URL (Uniform Resource Locator) is the address used to access resources on the internet. It tells the browser where to find a resource (like a webpage, image, video, etc.) and how to retrieve it.
+ Example of a URL: 
+ | Part             | What it is                          | Example              |
+| ---------------- | ----------------------------------- | -------------------- |
+| **Scheme**       | The type of connection              | `https://`           |
+| **Domain Name**  | Website name or address             | `www.example.com`    |
+| **Port**         | (Optional) Entry gate on the server | `:443`               |
+| **Path**         | File/page location on the website   | `/blog/article.html` |
+| **Query String** | Extra info sent to the server       | `?search=apple`      |
+| **Fragment**     | Jump to a part of the page          | `#top`               |
+ 
+2. URLs vs URIs with examples for each. Can all URLs be URIs? Why?
+ Ans: A URL is a type of URI that provides the means to locate a resource on a network, usually the web. It includes a scheme (like http), domain, and path. For example: https://www.example.com/page.html
+ 
+ A URI is a string of characters used to identify a resource either by location, by name, or both. For example: urn:isbn:0451450523
+
+ | Feature  | URI                                         | URL                                   |
+| -------- | ------------------------------------------- | ------------------------------------- |
+| Purpose  | Identifies a resource (by name or location) | Locates a resource on the internet    |
+| Contains | Name, location, or both                     | Location and access method (protocol) |
+| Subset?  | URI is the **superset**                     | URL is a **subset** of URI            |
+| Example  | `urn:isbn:0451450523`                       | `https://www.example.com`             |
+
+Yes, all URLs are URIs.
+This is because a URL is a specific type of URI that includes information on how to locate the resource. A URI can be:
+a URL (location),
+a URN (name),
+or both.
+But not all URIs are URLs, because some URIs only name a resource (like a URN) and do not give its location.
+

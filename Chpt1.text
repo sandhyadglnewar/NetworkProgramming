@@ -1,0 +1,28 @@
+1.  How does client server architecture works?
+
+Ans: Client-Server Architecture is a model in computing where multiple clients (users or devices) request and receive services from a centralized server. The client initiates communication. It sends a request to the server. The server is always listening for incoming requests. Once a request is received, the server processes it. It may involve accessing a database, running logic, or performing calculations. The server sends the appropriate response back to the client. The client receives the response and display or uses the data.
+For example, Sending a email is also an example of a client-server application. The client, who is willing to send an email, sends a connection request to the mail server. Then, the server requests authentication(password and email address) from the client. If the password and email address match, the email is sent to the destination address.
+
+2. What are the factors to be considered when designing a software?
+
+Ans: Software design is a mechanism to transform user requirements into some suitable form, which helps the programmer in software coding and implentation. It deals with representing the client's requirement, as described in SRS (Software Requirement Specification) document, into a form. 
+The key factors to consider when designing software, along with brief explanations:
+
+  a. Requirements Analysis: Understand what the user or client expects.Includes functional (what it should do) and non-functional (performance, usability) requirements.
+
+  b. Scalability: Ensure fast response times and optimal resource usage.Poor performance affects user satisfaction and usability.
+
+  c. Security: Protect data and user information from unauthorized access.Essential for applications involving personal or sensitive data.
+
+  d. Usability (User Experience): Should be easy to learn, use, and navigate.A good UI/UX increases user adoption and satisfaction.
+
+  e. Maintainability: Code should be easy to update, fix, or enhance. Helps in long-term support and reduces costs.
+
+3. Why do we really need network programming tools and platform? Explain some of them.
+
+Ans: Network programming tools and platforms are software libraries, environments, or utilities that help developers create applications which communicate over a network (like the internet or LAN).
+   They’re Needed:
+     a. To send and receive data between computers.
+     b. To build apps like websites, chat apps, file sharing systems, etc.
+     c. To simplify the complex task of handling network protocols, IPs, ports, and connections.
+     
